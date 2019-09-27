@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+<h3>난수 10개 생성</h3>
+<hr>
+<script type="text/javascript">
+	var n=[]; // 배열 n 선언
+	for(var j=0; j<10; j++){ // 난수 10개 생성
+		var x= Math.random()*1000;
+		n[i] = Math.floor(x); // 버림
+	}
+
+	for(var i=0;i<10; i++)
+		document.write(n[i]+" ");
+/*
+	document.write("<hr>");
+	var big =n[0];*/
+</script>
+</body>
+</html>

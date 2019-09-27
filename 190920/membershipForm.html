@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>회원가입</title>
+
+	<!-- css //-->
+	<style type="text/css">
+		<!--
+		a {text-decoration: none; color: black;}
+		a:hover {text-decoration: none;	color: red;}
+		td{font-size: 10pt}
+		body{background-color: fffff0}
+		-->
+	</style>
+
+
+
+	<script language="javascript">
+		
+
+		<!--
+			function gaib(x){
+
+				var alphaDigit = 
+				"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+
+				
+				for (i=0; i<x.pass1.value.length; i++) {
+					if (alphaDigit.indexOf(x.pass1.value.substring(i, i+1)) < 0) {
+						alert("비밀번호는 영문과 숫자의 조합만 사용할 수 있습니다.");
+						x.pass1.value=x.pass2.value="";
+						x.pass1.focus();
+						return;
+					} 
+				}	
+				
+				if(x.name.value==""){
+					alert("이름을 입력하세요.");
+					x.name.focus();
+					return;
+				}
+				for(i=0; i<x.name.value.length; i++){
+					var CodeNum = x.name.value.charCodeAt(i);
+					if(CodeNum < 128){
+						alert("한글로 입력해야 합니다.");
+						x.name.value="";
+					}
+				}
+				if (x.name.value.indexOf(" ") >= 0) {
+					alert("이름에 공백이 들어가면 안됩니다.");					
+					x.name.focus();
+					return;
+				}
+
+				
+
+				
+				if (x.pass1.value=="") {
+					alert("비밀번호를 입력하세요.")
+					x.pass1.focus();
+					return;
+				}
+				if (x.pass1.value.length < 4) {
+					alert("비밀번호는 4자리 이상 입력하셔야 합니다.");
+					x.pass1.focus();
+					return;
+				}
+				if (x.pass2.value==""){
+					alert("비밀번호를 확인 입력해 주셔야 합니다.")
+					x.pass2.focus();
+					return;
+				}
+				if (x.pass1.value != x.pass2.value) {
+					alert("비밀번호가 서로 일치하지 않습니다.");
+					x.pass2.value="";
+					x.pass1.focus();
+					return;
+				} 
+				if (x.pass1.value.indexOf(" ") >= 0) {
+					alert("비밀번호에는 공백이 들어가면 안됩니다.");
+					x.pass2.value="";
+					x.pass1.focus();
+					return;
+				}
+				if(x.myself.value==""){
+					alert("자기소개를 입력하세요.")
+					x.myself.focus();
+					return;
+				}
+
+
+				else{
+					var content =  "<html><head></head>"+"<body bgcolor=\"beige\">";
+					content +="회원가입 성공!!";
+					content +="</body></html>";
+
+					clear=window.open("","","width=300,height=200");
+					clear.document.write(clear)	;
+					clear.document.close();
+					return;
+
+
+				}
+
+
+
+
+			}
+			//-->
+
+
+			<!--
+			function hello(x){
+
+				var alphaDigit = 
+				"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+
+				for(i=0;i<x.id.value.length;i++){
+					if(alphaDigit.indexOf(x.id.value.substring(i,i+1))== -1){
+						alert("ID는 영문과 숫자의 조합만 사용할 수 있습니다.");
+						x.id.focus();
+						return;
+					}
+				}
+				if(x.id.value==""){
+					alert("ID를 입력하세요.");
+					x.id.focus();
+					return;
+				}
+				if(x.id.value.length <4){
+					alert("ID는 4~15자 이내여야 합니다.");
+					return;
+				}
+				if (x.id.value.indexOf(" ")>=0) {
+					alert("ID에는 공백이 들어가면 안됩니다.");
+					x.id.focus();
+					return;
+				}
+				else{
+					alert("사용가능한 아이디입니다.");
+				}
+
+
+				
+			}
+			//-->
+
+		</script>
+
+
+
+	</head>
+	<body>
+		<form name="frm1">
+			<table border="0" width="100%">
+				<tr>
+					<td align="left">
+						<a href=#
+						onclick="this.style.behavior='url(#default#homepage)':this.sethomepage
+						('http://www.hkd.com')">시작페이지등록</a>
+					</td>
+					<td align="right">
+						<a href=#
+						onclick="window.external.addfavorite('http://www.hkd.com')">즐겨찾기추가</a>
+					</td>
+				</tr>
+			</table>
+
+			<table border="1" width="600" height="500" align="center">
+				<tr bgcolor="e0ffff">
+					<th colspan="2">
+						<font size=6>폼 양식(○○○)</font>
+					</th>
+				</tr>
+				<tr>
+					<th>이름</th>
+					<td><input type="text" name="name" size="15" ></td>
+				</tr>
+				<tr>
+					<th>아이디</th>
+					<td>
+						<input type="text" name="id" size="15" maxlength="12">
+						<input type="button" value="확인" name="ok" align="absmiddle" 
+						onclick="hello(this.form)"> </td>
+					</tr>
+					<tr>
+						<th>패스워드</th>
+						<td><input type="password" name="pass1" size="15"> 패스워드 확인
+							<input type="password" name="pass2" size="15"></td>
+						</tr>
+
+						<tr >
+							<th>태어난 도시</th>
+							<td>
+								<select name="city">
+									<option value="서울" selected="">서울</option>
+									<option value="인천">인천</option>
+									<option value="대구">대구</option>
+									<option value="부산">부산</option>
+									<option value="대전">대전</option>
+									<option value="광주">광주</option>							
+								</select>
+							</td>
+						</tr>
+
+						<tr>
+							<th>사진등록</th>
+							<td>
+								<input type="file" size="40">
+							</td>
+						</tr>
+						<tr>
+							<th>자기소개</th>
+							<td>
+								<textarea cols="65" name="myself" rows="40" placeholder="자기소개의 글을 남기세요."></textarea>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2" align="center" height="40">
+								<input type="button" value="가입하기" onclick="gaib(this.form)">
+								<input type="reset" value="다시작성">
+							</td>
+						</tr>
+						<tr align="center">
+							<td colspan="2"><a href="#" onclick="history.back()">이전페이지로 가기</a>
+								&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+							</td>
+						</tr>
+					</table>
+				</form>				
+			</body>
+			</html>

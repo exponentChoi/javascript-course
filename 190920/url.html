@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>URL</title>
+   <script language="javascript">
+       function go(){
+         window.open(document.myform.mytext.value);
+      }
+      
+</script>
+</head>
+<body>
+   <form name="myform">
+      <TABLE BORDER="1" cellspacing="0" cellpadding="5" bgcolor="beige">
+         <tr><td>이동할 곳의 URL을 적어주세요</td></tr>
+         <tr><td>
+            <input type="text" name="mytext" value="http://" size="30">
+            <input type="button" value="이동" onclick="go();">
+         </td></tr>         
+      </TABLE>
+   </form>
+</body>
+</html>

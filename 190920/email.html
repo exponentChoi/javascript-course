@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>메일방명록</title>
+	<script language="javascript">
+		<!--
+			function valid(x){
+				if (x.Name.value=="") {
+				alert("이름을 입력하세요.");
+				x.Name.focus();
+				return false;
+			}
+			if(x.Email.value=="" || x.Email.value.indexOf('@')==-1 || x.Email.value.indexOf('.')==-1){
+				alert("잘못된 전자우편 주소입니다.");
+				x.Email.focus();
+				return false;
+			}
+			if(x.Remark.value==""){
+				alert("내용을 입력하세요.");
+				x.Remark.focus();
+				return false;
+			}
+
+			//->
+		<!-- 
+			function make() {
+				var content = "<html><head></head>"+"<body bgcolor=\"beige\">";
+				content += "Name: "+document.guest.Name.value;
+				content +="<br>Email: "+document.guest.Email.value;
+				content +="<br>Remark: "+document.guest.Remark.value;
+				content +="</body></html>";
+			guestWin = window.open("","","width=300,height=200");
+			guestWin.document.write(content);
+			guestWin.document.close();
+			}
+		}
+			//-->			
+	</script>
+</head>
+<body>
+	<form name="guest" method="post" action="mailto:xxx@yyy.com" enctype="text/plain" onsubmit="return valid(this)">
+	<CENTER>
+<h3>메일방명록</h3>
+<TABLE>
+	<TR><TD>이름을 적으세요.<BR>
+		<INPUT TYPE="text" NAME="Name" SIZE=20><BR>
+		E-mail 주소를 적으세요.<BR>
+		<INPUT TYPE="text" name="Email" size=25><BR><br>
+		보낼 내용을 적으세요.<br>
+		<textarea name="Remark" rows=7 cols="40"></textarea><p>
+			<input type="button" value="미리 보기" onclick="make();">
+			<input type="submit" value="보내기">
+		</TD></TR>
+</TABLE>
+</body>
+</html>
